@@ -8,13 +8,12 @@ datasource db {
 }
 
 model tenant {
-  id     String @id @default(auto()) @map("_id") @db.ObjectId
-  dbName String
-  slug   String
+  id      String  @id @default(auto()) @map("_id") @db.ObjectId
+  slug    String
 }
 
-model test {
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  access String[]
-  value   String
+model course {
+  id      String    @id @default(auto()) @map("_id") @db.ObjectId
+  access  String[]  @db.ObjectId
+  name    String
 }
